@@ -238,7 +238,7 @@
               	</div>
                 <div class="venue-view lgray-bg">
                 	<div id="gmap"></div>
-                	<div class="quick-venue-info">
+                	<!--div class="quick-venue-info">
                     	<div class="quick-venue-info-details">
                             <h3>City Club of Chicago</h3>
                             <p>400 N. Michigan Ave, Suite 805 Chicago, IL 60611</p>
@@ -255,7 +255,7 @@
                         <hr class="fw">
                         <span class="small">Current Weather</span>
                     	<div id="weather"></div>
-                    </div>
+                    </div-->
                 </div>
                 <div class="padding-tb50 lgray-bg call-to-action">
                     <div class="container">
@@ -618,12 +618,12 @@ $(document).ready(function() {
 <script src="http://maps.google.com/maps/api/js?sensor=false"></script> <!-- Google Map -->
 <script type="text/javascript">
 var geocoder = new google.maps.Geocoder();
-var address = "CITYCLUB, CHICAGO IL"; //Add your address here, all on one line.
-var latitude;
-var longitude;
+var address = "Universidad Nacional Del Altiplano"; //Add your address here, all on one line.
+var latitude="-15.823383";
+var longitude="-70.016856";
 var color = "#579bd3"; //Set your tint color. Needs to be a hex value.
 
-function getGeocode() {
+/*function getGeocode() {
 	geocoder.geocode( { 'address': address}, function(results, status) {
 		if (status == google.maps.GeocoderStatus.OK) {
     		latitude = results[0].geometry.location.lat();
@@ -631,7 +631,7 @@ function getGeocode() {
 			initGoogleMap();   
     	} 
 	});
-}
+}*/
 
 function initGoogleMap() {
 	var styles = [
@@ -647,7 +647,7 @@ function initGoogleMap() {
 			mapTypeIds: ['Styled']
 		},
 		center: new google.maps.LatLng(latitude, longitude),
-		zoom: 13,
+		zoom: 17,
 		scrollwheel: false,
 		navigationControl: false,
 		mapTypeControl: false,
@@ -675,8 +675,8 @@ function initGoogleMap() {
 	
 	
 	bounds = new google.maps.LatLngBounds(
-	  new google.maps.LatLng(-84.999999, -179.999999), 
-	  new google.maps.LatLng(84.999999, 179.999999));
+	  new google.maps.LatLng(-15.823383,-70.016856), 
+	  new google.maps.LatLng(-15.823383,-70.016856));
 
 	rect = new google.maps.Rectangle({
 	    bounds: bounds,
@@ -686,7 +686,7 @@ function initGoogleMap() {
 	    map: map
 	});
 }
-google.maps.event.addDomListener(window, 'load', getGeocode);
+google.maps.event.addDomListener(window, 'load', initGoogleMap);
 </script>
 </body>
 </html>
