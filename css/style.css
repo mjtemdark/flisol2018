@@ -1196,7 +1196,7 @@ body.boxed .body{
 	background:none;
 }
 .site-header{
-	height:80px;
+	height:100px;
 	width:100%;
 	margin:0 auto;
 	background:#fff;
@@ -1235,7 +1235,7 @@ body.boxed .body{
 	padding:0 0 0 20px;
 }
 .site-logo h1{
-	padding:25px 0 10px;
+	padding:0px 0 10px;
 	margin-bottom:0;
 	font-size:inherit;
 	line-height:normal;
