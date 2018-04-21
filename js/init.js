@@ -268,14 +268,14 @@ var CONVOCATION = window.CONVOCATION || {};
 				} else {
 				$(".main-navigation").css("display","none");
 			}
-		});*/
+		});
 		$(window).on('resize',function(){
 			if($("#menu-toggle").hasClass("opened")){
 				$(".main-navigation").css("display","block");
 			} else {
 				$(".main-navigation").css("display","none");
 			}
-		});
+		});*/
 	}
 /* ==================================================
    Flickr Widget
@@ -389,7 +389,7 @@ $(document).ready(function(){
 	CONVOCATION.StickyHeader();
 });
 
-$(window).resize(function(){
+$(window).on('resize',function(){
 	if ($(window).width() > 992){
 		$(".main-navigation").css("display","block");
 	} else {
@@ -465,7 +465,7 @@ $("[data-appear-progress-animation]").each(function() {
 $(document).ready(function(){
 	// Parallax Jquery Callings
 	if(!Modernizr.touch) {
-		$(window).bind('load', function () {
+		$(window).on('load', function () {
 			parallaxInit();						  
 		});
 	}
@@ -508,7 +508,7 @@ $(document).ready(function(){
 	$(".wwidth").css("width",wwidth);
 	$(".wheighterlh").css("height",wheightlh);
 });
-$(window).resize(function(){
+$(window).on('resize',function(){
 	var wheighter = $(window).height();
 	var wwidth = $(window).width();
 	var wheightlh = wheighter - 80;
