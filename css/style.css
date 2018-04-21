@@ -1222,7 +1222,7 @@ body.boxed .body{
 	position:fixed;
 	top:0;
 	left:0;
-	height:62px;
+	height:100px;
 	z-index:1010;
 	-webkit-box-shadow:0 1px 1px rgba(0,0,0,.1);
 	box-shadow:0 1px 1px rgba(0,0,0,.1);
@@ -1246,7 +1246,7 @@ body.boxed .body{
 	transition:all 0.3s ease 0.1s;
 }
 .sticky-header .site-logo h1{
-	padding-top:15px;
+	padding-top:0px;
 }
 .site-logo a{
 	color:#fff;
