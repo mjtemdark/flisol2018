@@ -2037,8 +2037,8 @@ body.boxed .body{
 	background-attachment: fixed!important;
 	background-position:center center;
 	-webkit-background-size:cover;
-	-moz-background-size:cover;
-	background-size:cover;
+	-moz-background-size:100%;
+	background-size:100%;
 	background-repeat:no-repeat;
 	background-color:#f8f8f8;
 }
