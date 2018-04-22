@@ -116,7 +116,7 @@ a > img {
 	color:#bababa;
 }
 .lgray-bg{
-	background:#f6f6f6;
+	background:#DAF8A2;
 }
 .dgray-bg{
 	background:#1b2126;
@@ -1152,7 +1152,7 @@ html[xmlns] .slides {
    6. Site Structure & Appearance
 ================================================== */
 body{
-	background-color:#ffffff;
+	background-color:#EAE8B0;
 	color:#666;
 	font-size:14px;
 	font-weight:400;
@@ -1199,7 +1199,7 @@ body.boxed .body{
 	height:100px;
 	width:100%;
 	margin:0 auto;
-	background:#fff;
+	background-color:#fff;
 	position:fixed;
 	z-index:999;
 	-webkit-transition:all 0.3s ease 0.2s;
@@ -1228,7 +1228,7 @@ body.boxed .body{
 	box-shadow:0 1px 1px rgba(0,0,0,.1);
 }
 .sticky-header.tranlucent{
-	background:rgba(255,255,255,.9);
+	background:rgba(255,255,255, 0.7);
 }
 .site-logo{
 	float:left;
