@@ -1852,6 +1852,11 @@ body.boxed .body{
         0 6px   0 rgba(255, 255, 255, 1.0),  
         0 7px   0 rgba(0,   0,   0,   0.150);
 }
+.papers iframe
+{
+	width: 720px;
+	height: 1260px;
+}
 .text-direction{
 	font-family: 'Satisfy', cursive;
 	color:#ccc;
@@ -2064,6 +2069,11 @@ body.boxed .body{
 	}
 }
 @media only screen and (max-width: 992px) {
+	.papers iframe
+{
+	width: 320px;
+	height: 1000px;
+}
 	.site-header.sticky-header{
 		height:100px;
 	}
