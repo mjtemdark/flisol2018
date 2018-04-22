@@ -53,7 +53,7 @@ var CONVOCATION = window.CONVOCATION || {};
 			e.preventDefault();
 		})
 	
-		$(window).scroll(function() {
+		$(window).on('scroll',function() {
 			didScroll = true;
 		});
 	
@@ -225,7 +225,7 @@ var CONVOCATION = window.CONVOCATION || {};
 	
 		var $menu = $('.site-header');
 	
-		$(window).scroll(function() {
+		$(window).on('scroll',function() {
 			didScroll = true;
 		});
 	
@@ -262,20 +262,20 @@ var CONVOCATION = window.CONVOCATION || {};
 			var WNH = WHG -HH;
 			$('.main-navigation').css("height",WNH);
 		}
-		$(window).resize(function(){
-			if($(body).hasClass(no-touch) & $(window).width() > 992) {
+		/*$(window).on('resize',function(){
+			if($('body').hasClass("no-touch") & $(window).width() > 992) {
 				$(".main-navigation").css("display","block");
 				} else {
 				$(".main-navigation").css("display","none");
 			}
 		});
-		$(window).resize(function(){
+		$(window).on('resize',function(){
 			if($("#menu-toggle").hasClass("opened")){
 				$(".main-navigation").css("display","block");
 			} else {
 				$(".main-navigation").css("display","none");
 			}
-		});
+		});*/
 	}
 /* ==================================================
    Flickr Widget
@@ -317,10 +317,10 @@ $(document).ready(function(){
 // Pages Design Functions
 
 // Any Button Scroll to section
-$('.scrollto').click(function(){
+/*$('.scrollto').click(function(){
 	$.scrollTo( this.hash, 800, { easing:'easeOutQuint' });
 	return false;
-});
+});*/
 
 // FITVIDS
 $(".fw-video").fitVids();
@@ -366,7 +366,7 @@ $(document).ready(function(){
 		$(this).find(".plan-selection").find(".btn").html('<i class="fa fa-check"></i> Selected');
 	});
 	if(Modernizr.touch && $(window).width() < 991 ) {
-		$(".sf-menu > li > a").click(function(e){
+		$(".sf-menu > li > a").on('click',function(e){
 			$(".main-navigation").slideUp();
 			e.preventDefault();
 		});
@@ -389,7 +389,7 @@ $(document).ready(function(){
 	CONVOCATION.StickyHeader();
 });
 
-$(window).resize(function(){
+$(window).on('resize',function(){
 	if ($(window).width() > 992){
 		$(".main-navigation").css("display","block");
 	} else {
@@ -465,12 +465,12 @@ $("[data-appear-progress-animation]").each(function() {
 $(document).ready(function(){
 	// Parallax Jquery Callings
 	if(!Modernizr.touch) {
-		$(window).bind('load', function () {
+		$(window).on('load', function () {
 			parallaxInit();						  
 		});
 	}
 	function parallaxInit() {
-		$('.parallax1').parallax("50%", 0.1);
+		$('.parallax1').parallax("100%", 0.1);
 		$('.parallax2').parallax("50%", 0.1);
 		$('.parallax3').parallax("50%", 0.1);
 		$('.parallax4').parallax("50%", 0.1);
@@ -482,21 +482,22 @@ $(document).ready(function(){
 	}
 	
 	//LOCAL SCROLL
-	jQuery('.sf-menu').localScroll({
+	$('.sf-menu').localScroll({
 		offset: -62
 	});
 	
-	var sections = jQuery('section');
-	var navigation_links = jQuery('.sf-menu a');
-	sections.waypoint({
-		handler: function(direction) {
+	var sections = $('section');
+	var navigation_links = $('.sf-menu a');
+	sections.waypoint(function(direction) {
 			var active_section;
-			active_section = jQuery(this);
+			active_section = $(this.element)
+			console.log(active_section);
 			if (direction === "up") active_section = active_section.prev();
-			var active_link = jQuery('.sf-menu a[href="#' + active_section.attr("id") + '"]');
+			var active_link = $('.sf-menu a[href="#' + active_section.attr("id") + '"]');
 			navigation_links.removeClass("current");
 			active_link.addClass("current").delay(1500);
 		},
+		{
 		offset: 150
 	});
 	// Window height/Width Getter Classes
@@ -507,7 +508,7 @@ $(document).ready(function(){
 	$(".wwidth").css("width",wwidth);
 	$(".wheighterlh").css("height",wheightlh);
 });
-$(window).resize(function(){
+$(window).on('resize',function(){
 	var wheighter = $(window).height();
 	var wwidth = $(window).width();
 	var wheightlh = wheighter - 80;
@@ -515,7 +516,7 @@ $(window).resize(function(){
 	$(".wwidth").css("width",wwidth);
 	$(".wheighterlh").css("height",wheightlh);
 });
-$(window).load(function(){
+$(window).on('load',function(){
 	$('.event-hero-info').fadeIn();
 });
 });
