@@ -491,7 +491,7 @@ $(document).ready(function(){
 	sections.waypoint(function(direction) {
 			var active_section;
 			active_section = $(this.element)
-			console.log(active_section);
+			//console.log(active_section);
 			if (direction === "up") active_section = active_section.prev();
 			var active_link = $('.sf-menu a[href="#' + active_section.attr("id") + '"]');
 			navigation_links.removeClass("current");

@@ -159,6 +159,11 @@ i, em, .italic{
 .text-align-center {
 	text-align: center;
 }
+.text-align-center img {
+	width: 250px;
+	height: 250px;
+	border: 1px solid #fff;
+}
 .text-align-right {
 	text-align: right;	
 }
