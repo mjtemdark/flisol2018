@@ -1201,7 +1201,7 @@ body.boxed .body{
 	background:none;
 }
 .site-header{
-	height:100px;
+	height:80px;
 	width:100%;
 	margin:0 auto;
 	background-color:#fff;
@@ -1227,7 +1227,7 @@ body.boxed .body{
 	position:fixed;
 	top:0;
 	left:0;
-	height:100px;
+	height:80px;
 	z-index:1010;
 	-webkit-box-shadow:0 1px 1px rgba(0,0,0,.1);
 	box-shadow:0 1px 1px rgba(0,0,0,.1);
@@ -1237,7 +1237,7 @@ body.boxed .body{
 }
 .site-logo{
 	float:left;
-	padding:0 0 0 20px;
+	padding:2px 0 0 20px;
 }
 .site-logo h1{
 	padding:0px 0 10px;
@@ -1300,7 +1300,7 @@ body.boxed .body{
 	color:#fff;
 }
 .sticky-header .main-navigation > ul > li > a{
-	line-height:62px;
+	line-height:80px;
 }
 .main-navigation > ul > li > a > i{
 	color:#999;
@@ -2080,7 +2080,7 @@ body.boxed .body{
 	height: 1000px;
 }
 	.site-header.sticky-header{
-		height:100px;
+		height:80px;
 	}
 	.sticky-header .site-logo h1{
 		padding-top:1px;
